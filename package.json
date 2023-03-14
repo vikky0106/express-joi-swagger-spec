@@ -17,7 +17,8 @@
     "pretty:check": "yarn pretty:exec --check  '**/*.js' '**/*.ts' '**/*.tsx'",
     "pretty:ci": "yarn pretty:exec --check  package.json $(git diff HEAD^ --name-only | egrep '[.](js|ts|tsx)$' | tr '\n' ' ')",
     "pretty:exec": "./node_modules/.bin/prettier --config ./.prettierrc.js --ignore-unknown --no-error-on-unmatched-pattern",
-    "pretty:fix": "yarn pretty:exec --write '**/*.js' '**/*.ts' '**/*.tsx'"
+    "pretty:fix": "yarn pretty:exec --write '**/*.js' '**/*.ts' '**/*.tsx'",
+    "version": "git add -A  src test  yarn.lock"
   },
   "author": {
     "name": "Vikas Patidar",
