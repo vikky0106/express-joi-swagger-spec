@@ -1,0 +1,90 @@
+{
+  "name": "express-joi-swagger-spec",
+  "title": "express-joi-swagger-spec",
+  "version": "0.0.0",
+  "description": "Validate & document api using swagger and joi",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "prepublish": "tsc",
+    "lint:check": "yarn lint:exec  .",
+    "lint:ci": "yarn lint:exec  package.json $(git diff HEAD^ --diff-filter=d --name-only | tr '\n' ' ')",
+    "lint:exec": "./node_modules/.bin/eslint --ext .tsx --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "pretty:check": "yarn pretty:exec --check  '**/*.js' '**/*.ts' '**/*.tsx'",
+    "pretty:ci": "yarn pretty:exec --check  package.json $(git diff HEAD^ --name-only | egrep '[.](js|ts|tsx)$' | tr '\n' ' ')",
+    "pretty:exec": "./node_modules/.bin/prettier --config ./.prettierrc.js --ignore-unknown --no-error-on-unmatched-pattern",
+    "pretty:fix": "yarn pretty:exec --write '**/*.js' '**/*.ts' '**/*.tsx'"
+  },
+  "author": {
+    "name": "Vikas Patidar",
+    "email": "vikky0106@gmail.com"
+  },
+  "homepage": "https://github.com/vikky0106/express-joi-swagger-spec/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikky0106/express-joi-swagger-spec"
+  },
+  "keywords": [
+    "swagger",
+    "express",
+    "ui",
+    "json",
+    "joi",
+    "auto",
+    "automatic",
+    "documentation",
+    "openapi",
+    "validation",
+    "apidocument",
+    "apispec"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Vikas Patidar",
+      "email": "vikky0106@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "express": "^4.18.2",
+    "glob": "^9.2.1",
+    "joi": "^17.8.4",
+    "joi-to-swagger": "^6.2.0",
+    "lodash": "^4.17.21",
+    "swagger-spec-express": "^2.0.23",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/joi": "^17.2.2",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.15.3",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "tslint": "^6.0.0",
+    "typescript": "^4.9.5"
+  },
+  "files": [
+    "dist/src/index.js",
+    "dist/src/index.d.ts",
+    "dist/src/responsesEnum.js",
+    "dist/src/responsesEnum.d.ts",
+    "dist/src/validation/validate.d.ts",
+    "dist/src/validation/validate.js",
+    "dist/src/validation/validation-error.d.ts",
+    "dist/src/validation/validation-error.js",
+    "dist/src/swagger-spec/common.js",
+    "dist/src/swagger-spec/common.d.ts",
+    "dist/src/swagger-spec/common.js",
+    "dist/src/responsesEnum.js",
+    "README.md"
+  ]
+}

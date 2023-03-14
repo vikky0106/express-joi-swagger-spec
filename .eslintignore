@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+# misc
+.DS_Store
+.husky
+
+src/.env
+.env.development
+.env.production
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.editorconfig
+.github
+
+
+# WebStorm
+.idea
+
+*.log
+.vscode/settings.json
+npmrc
+test_reports
+dockerfile
+package.json
+yarn.lock
+test/.env
+src/privateLibs/express-joi-swagger-spec
+azure-pipelines.yml
